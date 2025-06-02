@@ -1,4 +1,6 @@
 Revision history for Text::T9
 
 {{$NEXT}}
+
+0.1  2025-06-02T19:48:35+02:00
     - Initial version as a Raku Community Module
