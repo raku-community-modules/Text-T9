@@ -1,0 +1,17 @@
+use Test;
+use Text::T9;
+
+plan 4;
+
+my @words = <this is just a simple kiss test lips here how>;
+
+is t9(5477, @words).join('|'), 'kiss|lips', 'basic case';
+is t9(5296, ['jaźń'], { ź => 9, ń => 6 })[0], 'jaźń',
+   'with optional keys';
+
+# legacy interface
+is t9_find_words(5477, @words).join('|'), 'kiss|lips', 'legacy: basic case';
+is t9_find_words(5296, ['jaźń'], { ź => 9, ń => 6 })[0], 'jaźń',
+   'legacy: with optional keys';
+
+# vim: expandtab shiftwidth=4

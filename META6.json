@@ -1,12 +1,28 @@
 {
-    "perl" : "6.*",
-    "name" : "Text::T9",
-    "license" : "MIT",
-    "version" : "*",
-    "description" : "Guess words basing on a T9 key sequence",
-    "provides" : {
-        "Text::T9" : "lib/Text/T9.pm"
-    },
-    "depends" : [],
-    "source-url" : "git://github.com/tadzik/Text-T9.git"
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Tadeusz Sośnierz"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Guess words based on a T9 key sequence",
+  "license": "MIT",
+  "name": "Text::T9",
+  "perl": "6.*",
+  "provides": {
+    "Text::T9": "lib/Text/T9.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Text-T9.git",
+  "tags": [
+    "TEXT]",
+    "T9",
+    "KEYPAD"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.1"
 }

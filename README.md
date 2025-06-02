@@ -1,0 +1,42 @@
+[![Actions Status](https://github.com/raku-community-modules/Text-T9/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/Text-T9/actions) [![Actions Status](https://github.com/raku-community-modules/Text-T9/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/Text-T9/actions) [![Actions Status](https://github.com/raku-community-modules/Text-T9/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/Text-T9/actions)
+
+NAME
+====
+
+Text::T9 - Guess words based on a T9 key sequence
+
+SYNOPSIS
+========
+
+```raku
+use Text::T9;
+
+my @words = <this is a simple kiss test lips here how>;
+.say for t9(5477, @words);  # kiss lips
+
+my %additional-keys = ź => 9, ń => 6;
+@words.push: 'jaźń';
+.say for t9(5296, @words, %additional-keys);  # jaźń
+```
+
+DESCRIPTION
+===========
+
+The `Text::T9` distribution exports a single subroutine `t9` that looks up matching words from a given list of words using the [T9 predictive text](https://en.wikipedia.org/wiki/T9_(predictive_text)) algorithm known from older mobile phones (pre-smart phone).
+
+AUTHOR
+======
+
+Tadeusz Sośnierz
+
+Source can be located at: https://github.com/raku-community-modules/Text::T9 . Comments and Pull Requests are welcome.
+
+COPYRIGHT AND LICENSE
+=====================
+
+Copyright 2012 - 2017 Tadeusz Sośnierz
+
+Copyright 2025 Raku Community
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+
